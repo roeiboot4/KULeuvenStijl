@@ -14,7 +14,13 @@
 	\useasboundingbox (0,0) rectangle(\paperwidth,0.08\paperheight);
 		\fill[KULeuvenFill] (0,0) rectangle (\paperwidth,.06\paperheight);
 		\node [anchor=east,inner sep=0,xshift=-0.03\paperwidth,yshift=0.06\paperheight] at (current page.south east) {\pgfuseimage{KULeuvenLogo}};
-	%TODO: title + author + slide number + totalslides
+
+		\begin{beamercolorbox}{footer}	
+		 \node [anchor=west, xshift=0.03\paperwidth,yshift=0.03\paperheight] at (current page.south west)
+			{\ifbeamer@framenumbers \insertframenumber\,/\,\inserttotalframenumber \,--\,\fi
+			\,\insertauthor:\,\inserttitle};
+		\end{beamercolorbox}
+
 \end{tikzpicture}
 }{%  on the title page
 \begin{tikzpicture}

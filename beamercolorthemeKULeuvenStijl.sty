@@ -16,14 +16,12 @@
 % -----------------------------------------------------------------------------
 % Color components of the template.
 % -----------------------------------------------------------------------------
-% Unfortunately, the RGB components as read from the PPTX template are somewhat different from these in the KULeuven logo...
 \definecolor{KULeuvenBodyText}{RGB}{18,60,117}
 \definecolor{KULeuvenHeaderText}{RGB}{82,189,236}
 \definecolor{KULeuvenFill}{RGB}{17,110,138}
-% TODO: the PPT presentation defines a gradient of the filling color.
 \definecolor{KULeuvenTitle}{RGB}{255,255,255} 	% white 
 \definecolor{KULeuvenMath}{RGB}{0,0,0} 			% black 
-\definecolor{KULeuvenAlert}{RGB}{255,0,0} 		% plain simple red 
+\definecolor{KULeuvenAlert}{RGB}{255,0,0} 		% plain red 
 
 % -----------------------------------------------------------------------------
 % 
@@ -33,8 +31,7 @@
 \setbeamercolor{frametitle}{fg=KULeuvenHeaderText}	% frame title
 \setbeamercolor{math text displayed}{fg=black}      	% equations in displaystyle (inlined math inherits from normal text)
 %\setbeamercolor{section in toc}{fg=blue_kuleuven}		%toc (section) color
-\setbeamercolor{frame number in foot}{fg=KULeuvenBodyText}%
-\setbeamercolor{frame number in head}{fg=KULeuvenBodyText}%
+\setbeamercolor{footer}{fg=KULeuvenTitle}%
 \setbeamercolor{alerted text}{fg=KULeuvenAlert}  % alert color
 % -----------------------------------------------------------------------------
 % Elements of the title page

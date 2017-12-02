@@ -8,28 +8,21 @@
 % -----------------------------------------------------------------------------
 % Options
 % -----------------------------------------------------------------------------
-
-
 \newif\ifbeamer@sleutel
 \newif\ifbeamer@nologo
 \newif\ifbeamer@nonav
-\newif\ifbeamer@framenumber
-\newif\ifbeamer@totalframenumber
-
-
+\newif\ifbeamer@framenumbers
 
 % Set defaults
 \beamer@sleutelfalse
 \beamer@nologofalse
-\beamer@framenumberfalse
-\beamer@totalframenumberfalse
+\beamer@framenumbersfalse
 \beamer@nonavfalse
 
 \DeclareOptionBeamer{sleutel}{\beamer@sleuteltrue}
 \DeclareOptionBeamer{nologo}{\beamer@nologotrue}
 \DeclareOptionBeamer{nonav}{\beamer@nonavtrue}
-\DeclareOptionBeamer{framenumber}{\beamer@framenumbertrue}
-\DeclareOptionBeamer{totalframenumber}{\beamer@totalframenumbertrue}
+\DeclareOptionBeamer{framenumbers}{\beamer@framenumberstrue}
 
 \ProcessOptionsBeamer
 % -----------------------------------------------------------------------------
@@ -39,7 +32,6 @@
 \RequirePackage{etoolbox}
 
 \mode<presentation>
-
 % 
 % Prepare and load artwork
 %
@@ -55,7 +47,6 @@
 \pgfdeclareimage[width=\sleutel@width]{KULeuvenSleutel}{images/sleutel.png}
 \pgfdeclareimage[width=\sleutelback@width]{KULeuvenSleutelLicht}{images/sleutelLicht.png}
 \pgfdeclareimage[width=\sleutelback@width]{KULeuvenSleutelDonker}{images/sleutelDonker.png}
-
 %
 % Apply the themes
 %
@@ -65,7 +56,7 @@
 \useoutertheme{KULeuvenStijl}
 
 \ifbeamer@nonav%
-\setbeamertemplate{navigation symbols}{}
+	\setbeamertemplate{navigation symbols}{}
 \fi 
 
 
